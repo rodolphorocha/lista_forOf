@@ -5,12 +5,16 @@
     // let listaDeNumeros = [1, 2.5, -3, 4, 8.9, 4.789, -25.6, 42];
     //Identifique APENAS os números INTEIROS e POSITIVOS. Adicione-os em uma lista e apresente ao fim do programa, indicando também quantos números foram localizados.
 
-    //ENTRADA
+    
+    let listaDeNumeros = [1, 2.5, -3, 4, 8.9, 4.789, -25.6, 42];
+    let numeroInteiroP = [];
 
+    for (let numero of listaDeNumeros) {
+        if(numero > 0 && Number.isInteger(numero)) {
+            numeroInteiroP.push(numero);
+        }
+    }
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+    document.write(`Esses são os numero que atendem ao requisito: <li>${numeroInteiroP.join("<li>")} </li> <br>
+                    A quantidade de numeros que atenderam ao resultado é de: <li> ${numeroInteiroP.length} </li>`);
 </script>

@@ -5,12 +5,28 @@
     // let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     //Separe os números pares e os números ímpares em listas distintas e apresente as listas de forma crescente e forma descrescente.
 
-    //ENTRADA
+    let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let pares = [];
+    let impares = [];
+
+    for (let item of listaDeNumeros) {
+        if (item % 2 === 0) {
+            pares.push(item)
+        } else {
+            impares.push(item)
+        }
+    }
 
 
-    //PROCESSAMENTO
+    let paresCrescentes = pares.sort((a, b) => a - b);
+    let imparesCrescentes = impares.sort((a, b) => a - b);
 
+    let paresDecrescentes = pares.reverse((a, b) => a - b);
+    let imparesDecrescentes = impares.reverse((a, b) => a - b );
 
-    //SAÍDA
-
+    document.write(`Lista de números pares (crescente): <li>${paresCrescentes.join("<li>")}</li>`);
+    document.write(`Lista de números ímpares (crescente): <li>${imparesCrescentes.join("<li>")}</li>`);
+    document.write(`Lista de números pares (decrescente): <li>${paresDecrescentes.join("<li>")}</li>`);
+    document.write(`Lista de números ímpares (decrescente): <li>${imparesDecrescentes.join("<li>")}</li>`);
+</script>
 </script>
